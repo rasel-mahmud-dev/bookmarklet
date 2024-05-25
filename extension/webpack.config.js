@@ -15,6 +15,7 @@ class CustomAfterBuildPlugin {
                 const lines = data.split('/*! For license information please see bundle.js.LICENSE.txt */\n');
                 lines.shift();
                 const updatedContent = `javascript:${lines.join('')}`;
+                // const updatedContent = `{lines.join('')}`;
                 writeFile(filePath, updatedContent, (err) => {
                     if (err) {
                         console.error(`Error writing file: ${err}`);
