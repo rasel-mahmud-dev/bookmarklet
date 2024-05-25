@@ -37,7 +37,9 @@ const ExtensionApp = () => {
     React.useEffect(() => {
         let videos = document.querySelectorAll("video")
         let v = []
+        console.log(videos)
         if (videos && videos.length > 0) {
+
             for (let i = 0; i < videos.length; i++) {
                 if (videos[i]?.duration >= 1000) {
                     v.push(videos[i]);
